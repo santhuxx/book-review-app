@@ -73,7 +73,9 @@ const Signup = () => {
         <Form.Item
           name="password"
           label="Password"
-          rules={[{ required: true, message: 'Please enter your password!' }]}
+          rules={[{ required: true, message: 'Please enter your password!' },
+          { min: 6, message: 'Password must be at least 6 characters!' }]}
+          
           hasFeedback
         >
           <Input.Password placeholder="Enter your password" />
@@ -84,7 +86,8 @@ const Signup = () => {
           dependencies={['password']}
           rules={[
             { required: true, message: 'Please re-enter your password!' },
-            { validator: validatePasswords }
+            { validator: validatePasswords },
+            { min: 6, message: 'Password must be at least 6 characters!' }
           ]}
           hasFeedback
         >

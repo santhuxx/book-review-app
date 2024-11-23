@@ -1,0 +1,150 @@
+.p-6 {
+    padding: 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Back Button */
+  .mb-4 {
+    margin-bottom: 20px;
+  }
+
+  .body-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; 
+    filter: blur(8px); 
+    opacity: 0.8; 
+  }
+  
+  .mb-4 button {
+    background-color: #003366; 
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mb-4 button:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05);
+  }
+  
+  /* Main Card Styles */
+  .card {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+
+  .card .ant-typography {
+    color: #003366; 
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+  }
+  
+  .flex .ant-rate {
+    font-size: 24px; 
+  }
+  
+  .flex .ant-typography {
+    font-size: 16px;
+    color: #555; 
+  }
+  
+ 
+  .grid {
+    display: grid;
+    grid-gap: 16px;
+    width: 100%;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .md\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .lg\\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+
+  .w-full {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .w-full:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .space-y-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+
+  .text-gray-500 {
+    color: #8c8c8c; 
+    font-size: 14px;
+    text-align: right;
+  }
+  
+
+  .no-reviews {
+    font-style: italic;
+    font-size: 16px;
+    color: #8c8c8c;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+
+  .ant-alert {
+    max-width: 800px;
+    width: 100%;
+  }
+  
+
+  .spin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  

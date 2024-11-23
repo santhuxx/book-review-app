@@ -1,0 +1,166 @@
+
+.custom-signin-form {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../back.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  position: relative;
+}
+
+.custom-signin-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 54, 93, 0.377) 0%, rgba(45, 55, 72, 0.603) 100%);
+  pointer-events: none;
+}
+
+.custom-signin-form form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.custom-signin-form form:hover {
+  background: rgba(255, 255, 255, 0.98);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.custom-signin-form form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #1890ff, #69c0ff);
+}
+
+.custom-signin-form h5 {
+  margin-bottom: 1.5rem;
+  color: #1a365d;
+  text-align: center;
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+}
+
+.custom-signin-form .ant-form-item-label > label {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.custom-signin-form .ant-input,
+.custom-signin-form .ant-input-password {
+  height: 45px;
+  border-radius: 8px;
+  border: 1.5px solid #e2e8f0;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.custom-signin-form .ant-input:hover,
+.custom-signin-form .ant-input-password:hover {
+  border-color: #1890ff;
+  background: rgba(255, 255, 255, 1);
+}
+
+.custom-signin-form .ant-input:focus,
+.custom-signin-form .ant-input-password-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+  background: rgba(255, 255, 255, 1);
+}
+
+.custom-signin-form .ant-checkbox-wrapper {
+  color: #4a5568;
+}
+
+.custom-signin-form .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.custom-signin-form .ant-btn {
+  height: 45px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, #1890ff, #69c0ff);
+  border: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.custom-signin-form .ant-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.15);
+}
+
+.small-popup {
+  width: 300px !important;
+  font-size: 0.9rem !important;
+}
+
+.small-font {
+  font-size: 0.85rem !important;
+}
+
+.custom-signin-form .text-sm {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.custom-signin-form .text-blue-700 {
+  color: #1890ff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.custom-signin-form .text-blue-700:hover {
+  text-decoration: underline;
+}
+
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-signin-form form {
+  animation: formAppear 0.6s ease-out;
+}
+
+@media (max-width: 480px) {
+  .custom-signin-form form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .custom-signin-form h5 {
+    font-size: 1.5rem !important;
+  }
+}

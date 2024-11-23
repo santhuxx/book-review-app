@@ -1,0 +1,148 @@
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../back.jpg'); 
+  background-size: cover;
+  background-position: center;
+  
+  background-repeat: no-repeat;
+  padding: 20px;
+  position: relative;
+}
+
+.signup-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  background: linear-gradient(135deg, rgba(26, 54, 93, 0.377) 0%, rgba(45, 55, 72, 0.603) 100%);
+  pointer-events: none;
+}
+
+.signup-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.signup-form:hover {
+  background: rgba(255, 255, 255, 0.98);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.signup-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #1890ff, #69c0ff);
+}
+
+.signup-form h4.ant-typography {
+  margin-bottom: 1.5rem;
+  color: #1a365d00;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.signup-form .ant-form-item-label > label {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.signup-form .ant-input,
+.signup-form .ant-input-password {
+  height: 45px;
+  border-radius: 8px;
+  border: 1.5px solid #e2e8f0;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.signup-form .ant-input:hover,
+.signup-form .ant-input-password:hover {
+  border-color: #1890ff;
+  background: rgba(255, 255, 255, 1);
+}
+
+.signup-form .ant-input:focus,
+.signup-form .ant-input-password-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+  background: rgba(255, 255, 255, 1);
+}
+
+.signup-form .ant-btn {
+  height: 45px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, #1890ff, #69c0ff);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.signup-form .ant-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 143, 255, 0.096);
+}
+
+.signup-form .text-center {
+  text-align: center;
+  margin-top: 1rem;
+  color: #4a5568;
+}
+
+.signup-form .text-center a {
+  color: #1890ff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.signup-form .text-center a:hover {
+  text-decoration: underline;
+}
+
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signup-form {
+  animation: formAppear 0.6s ease-out;
+}
+
+@media (max-width: 480px) {
+  .signup-form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .signup-form h4.ant-typography {
+    font-size: 1.5rem;
+  }
+}
